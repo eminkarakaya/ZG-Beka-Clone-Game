@@ -124,6 +124,7 @@ public class Gun : Raycast , IGun
             dirPoint = hit.point;
             coolDown = cooldownTemp;
             slider.value ++;
-        } 
+            AudioSource.PlayClipAtPoint(gunData.fireSound,gun.transform.position);
+        }   
     }
 }

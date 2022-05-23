@@ -15,6 +15,8 @@ public enum Tasks
 }
 public class GameManager : Singleton<GameManager>
 {
+    public AudioClip helicopterSound;
+    public List<AudioClip> startSounds;
     [HideInInspector] public int killCount;
     public float tahliyeSuresi;
     public Text tahliyeText;
@@ -60,6 +62,7 @@ public class GameManager : Singleton<GameManager>
     }
     void Start()
     {   
+        AudioSource.PlayClipAtPoint(startSounds[UnityEngine.Random.Range(0,startSounds.Count)],Camera.main.transform.position);
         tahliyeText.gameObject.SetActive(false);
         winCanvasPanel = winCanvasPanel.GetComponent<Image>();
         // allZombiesArray = GameObject.FindObjectsOfType<Enemy>();
@@ -101,6 +104,7 @@ public class GameManager : Singleton<GameManager>
     }
     public void Tahliye()
     {
+        AudioSource.PlayClipAtPoint(helicopterSound,Camera.main.transform.position);
         tahliyeText.gameObject.SetActive(true);
         tahliyeSuresi -= Time.deltaTime;
         tahliyeText.text = "Tahliye Ediliyor .. " + tahliyeSuresi.ToString();

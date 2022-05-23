@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName ="Guns")]
 public class GunData : ScriptableObject , IGun
 {
+    public AudioClip fireSound;    
     public string gunName;
     public int bulletType;
     public Sprite weaponSprite;

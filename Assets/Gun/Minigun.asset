@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6dcd1cbb396c9943890b68c27746063, type: 3}
   m_Name: Minigun
   m_EditorClassIdentifier: 
-  ID: 0000
+  fireSound: {fileID: 8300000, guid: 17e65e0e10a366f4299cd18e93d54b18, type: 3}
   gunName: Minigun
   bulletType: 0
   weaponSprite: {fileID: 21300000, guid: c35dc461edc3c6f4d86cff4428aa7d67, type: 3}

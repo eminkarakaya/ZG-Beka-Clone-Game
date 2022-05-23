@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6dcd1cbb396c9943890b68c27746063, type: 3}
   m_Name: Sniper 1
   m_EditorClassIdentifier: 
-  ID: 0002
+  fireSound: {fileID: 8300000, guid: 98111433185e2ee42a8ef2840af2d9fc, type: 3}
   gunName: Sniper
   bulletType: 2
   weaponSprite: {fileID: 21300000, guid: 98eadb05fadcb3845a2289356ed9495e, type: 3}

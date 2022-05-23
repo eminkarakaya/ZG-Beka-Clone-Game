@@ -508,9 +508,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa85b6b90268e53468ad7969740fba9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slotSayisi: 3
   selectedGundata: {fileID: 0}
-  playerGunDatas:
-  - {fileID: 11400000, guid: d11d002e7d6cda448b7882fdfc57ae6f, type: 2}
   gunDatas:
   - {fileID: 11400000, guid: 2be9aaa38c7924a4582b8d89f1970d8b, type: 2}
 --- !u!4 &287344596
@@ -1955,7 +1954,6 @@ GameObject:
   - component: {fileID: 1293859888}
   - component: {fileID: 1293859887}
   - component: {fileID: 1293859889}
-  - component: {fileID: 1293859890}
   - component: {fileID: 1293859886}
   m_Layer: 0
   m_Name: MenuManeger
@@ -2022,19 +2020,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6db8c423a0e476e4aaead68aaf08392d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1293859890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1293859885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 788132ac98a8efd4da314d83bab33f27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 1390421801}
 --- !u!1 &1333869940
 GameObject:
   m_ObjectHideFlags: 0
@@ -2280,11 +2265,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1390421801 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1876675968597709817, guid: 1d892bf73b0b7db4c96ebfc04f8891f1, type: 3}
-  m_PrefabInstance: {fileID: 1876675968736494621}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1474073628
 GameObject:
   m_ObjectHideFlags: 0
@@ -2808,14 +2788,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1293859890}
-        m_TargetAssemblyTypeName: SceneManeger, Assembly-CSharp
-        m_MethodName: Transferr
-        m_Mode: 1
+      - m_Target: {fileID: 1293859889}
+        m_TargetAssemblyTypeName: AttackSceneManager, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 6
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

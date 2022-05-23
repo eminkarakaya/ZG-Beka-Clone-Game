@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemiesInRange : MonoBehaviour
 {
+    public List<AudioClip> helpSounds;
     public GameObject saldiriText;
     public List<Enemy> enemies;
 
@@ -16,6 +17,7 @@ public class EnemiesInRange : MonoBehaviour
                 enemies.Add(enemy);
                 saldiriText.SetActive(true);
                 StartCoroutine(saldiritxt());
+                AudioSource.PlayClipAtPoint(helpSounds[Random.Range(0,helpSounds.Count)], transform.parent.transform.position);
             }
             else
             {

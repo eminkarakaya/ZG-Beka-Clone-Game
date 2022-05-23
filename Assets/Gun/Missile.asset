@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6dcd1cbb396c9943890b68c27746063, type: 3}
   m_Name: Missile
   m_EditorClassIdentifier: 
-  ID: 0001
+  fireSound: {fileID: 8300000, guid: da2645e6f86cc3c4487df3da5cbc9194, type: 3}
   gunName: Missile
   bulletType: 1
   weaponSprite: {fileID: 21300000, guid: 935a546cd4e33644f83c90eef7c510d2, type: 3}

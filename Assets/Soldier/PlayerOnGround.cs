@@ -8,6 +8,7 @@ using System;
 
 public class PlayerOnGround : MonoBehaviour
 {
+    public AudioClip helpSound;
     public bool textbool;
     public Transform bombaPatlamaTransform;
     public GameObject towerText;
@@ -97,6 +98,7 @@ public class PlayerOnGround : MonoBehaviour
     }
     public void Fire()
     {
+
         if(enemies.Count == 0)
         {   
             tasks = Tasks.move;

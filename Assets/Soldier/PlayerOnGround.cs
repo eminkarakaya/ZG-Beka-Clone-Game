@@ -8,7 +8,7 @@ using System;
 
 public class PlayerOnGround : MonoBehaviour
 {
-    public AudioClip helpSound;
+    public AudioClip bombPlantedSound;
     public bool textbool;
     public Transform bombaPatlamaTransform;
     public GameObject towerText;
@@ -169,6 +169,7 @@ public class PlayerOnGround : MonoBehaviour
         bombadanKacmaSuresi -= Time.deltaTime;
         if(plantTime <= 0)
         {
+            AudioSource.PlayClipAtPoint(bombPlantedSound,transform.position);
             plantTime = plantTimeTemp;
             plantSlider.SetActive(false);
             GameManager.Instance.index ++;

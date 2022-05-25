@@ -15,6 +15,8 @@ public enum Tasks
 }
 public class GameManager : Singleton<GameManager>
 {
+    public Text killCountTxt;
+    bool soundBool;
     public AudioClip helicopterSound;
     public List<AudioClip> startSounds;
     [HideInInspector] public int killCount;
@@ -62,6 +64,7 @@ public class GameManager : Singleton<GameManager>
     }
     void Start()
     {   
+        Health.KillEvent += Death;
         AudioSource.PlayClipAtPoint(startSounds[UnityEngine.Random.Range(0,startSounds.Count)],Camera.main.transform.position);
         tahliyeText.gameObject.SetActive(false);
         winCanvasPanel = winCanvasPanel.GetComponent<Image>();
@@ -75,6 +78,11 @@ public class GameManager : Singleton<GameManager>
     void Update()
     {
         taskClasses[index].Invoke();
+    }
+    public void Death()
+    {
+        GameManager.Instance.killCount++;
+        killCountTxt.text = GameManager.Instance.killCount.ToString();
     }
     public void CreateZombie(Vector3 pos, GameObject prefab)
     {
@@ -104,7 +112,12 @@ public class GameManager : Singleton<GameManager>
     }
     public void Tahliye()
     {
-        AudioSource.PlayClipAtPoint(helicopterSound,Camera.main.transform.position);
+        if(soundBool == false)
+        {
+            AudioSource.PlayClipAtPoint(helicopterSound,Camera.main.transform.position);
+            soundBool = true;
+        }
+
         tahliyeText.gameObject.SetActive(true);
         tahliyeSuresi -= Time.deltaTime;
         tahliyeText.text = "Tahliye Ediliyor .. " + tahliyeSuresi.ToString();

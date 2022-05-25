@@ -4,17 +4,25 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public int damage;
-    public float explosionForce;
+    public Gun raycast;
     public GameObject effect;
+    public AudioClip fireExpSound;  
+    // public static event System.Action bulletTrigger;
+    public float explosionForce;
+    public int damage;
     public float speed;
     public Vector3 dir;
     public float r;
+    void Start()
+    {
+        raycast = GameObject.FindObjectOfType<Gun>();
+    }
     void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag =="Ground")
         {
-            Debug.Log("ground");
+            BulletTrigger();
+            
             var cols = Physics.OverlapSphere(transform.position, r);
             var rigidbodies = new List<Rigidbody>();
             foreach (var col in cols)
@@ -35,7 +43,17 @@ public class Bullet : MonoBehaviour
         
         }
     }
-
+    public void BulletTrigger()
+    {
+        if(fireExpSound != null)
+        {
+            AudioSource.PlayClipAtPoint(fireExpSound,raycast.hit.point);
+        }
+        if(effect != null)
+        {
+            Instantiate(effect,raycast.hit.point,Quaternion.identity);
+        }
+    }
     void Update()
     {
         transform.position += dir*Time.deltaTime*speed;

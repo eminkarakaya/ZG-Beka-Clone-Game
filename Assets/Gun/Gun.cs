@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class Gun : Raycast , IGun
 {
+    
     public Material isinmaMat;
     public Material eskiIsinmaMat;
     public bool isMaxValue;
@@ -52,7 +53,6 @@ public class Gun : Raycast , IGun
         if(slots.gunDatas.Count >= index)
         {
             gunData = slots.gunDatas[index-1];
-            Debug.Log("gundata " + gunData);
         }
     }
     protected override void Update()

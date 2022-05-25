@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6dcd1cbb396c9943890b68c27746063, type: 3}
   m_Name: Missile
   m_EditorClassIdentifier: 
+  effect: {fileID: 100000, guid: 15ca5b8fa431dc04291a79cadcd19874, type: 3}
+  fireExpSound: {fileID: 8300000, guid: 6fd3baa4874000548a9b0a94470306a4, type: 3}
   fireSound: {fileID: 8300000, guid: da2645e6f86cc3c4487df3da5cbc9194, type: 3}
   gunName: Missile
   bulletType: 1

@@ -25,6 +25,7 @@ public class EnemiesInRange : MonoBehaviour
             }
         }
     }
+
     void OnTriggerExit(Collider other)
     {
         if(other.TryGetComponent(out Enemy enemy))

@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class CanvasLookAt : MonoBehaviour
 {
-    [SerializeField] Transform target;
+    Transform target;
+    void Start()
+    {
+        target = Camera.main.gameObject.transform;
+    }
     void LateUpdate()
     {
         transform.LookAt(target);

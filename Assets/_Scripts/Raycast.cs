@@ -5,7 +5,7 @@ using UnityEngine;
 public class Raycast : MonoBehaviour
 {
     [SerializeField] protected LayerMask layerMask;
-    protected RaycastHit hit;
+    public RaycastHit hit;
 
     protected void CastRay()
     {

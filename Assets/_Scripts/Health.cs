@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
+    public static event System.Action KillEvent;
+
     public Text killCountTxt;
     public Slider hpSlider;
     [SerializeField] private int _hp;
@@ -19,11 +21,11 @@ public class Health : MonoBehaviour
             {
                 if(this.TryGetComponent(out Enemy enemy))
                 {
-                    GameManager.Instance.killCount++;
-                    killCountTxt.text = GameManager.Instance.killCount.ToString();
+                    KillEvent.Invoke();
                 }
                 Destroy(gameObject);
             }
         }
     }
+    
 }

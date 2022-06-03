@@ -2575,55 +2575,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7203480677945801704, guid: 033f88d8eff991e4f9edae525e464600, type: 3}
   m_PrefabInstance: {fileID: 1643246326}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1650199107
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1650199109}
-  - component: {fileID: 1650199108}
-  m_Layer: 0
-  m_Name: slot
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1650199108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1650199107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa85b6b90268e53468ad7969740fba9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slotSayisi: 3
-  selectedGundata: {fileID: 0}
-  gunDatas:
-  - {fileID: 11400000, guid: 2be9aaa38c7924a4582b8d89f1970d8b, type: 2}
-  - {fileID: 11400000, guid: 8603ec55f50f3cf47902e24f1440aaef, type: 2}
-  - {fileID: 11400000, guid: a49c5aaf816d78f4aa8aba961943d059, type: 2}
---- !u!4 &1650199109
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1650199107}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.177411, y: 1.5862627, z: 5.857707}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 20
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1664018473 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3565162407522516890, guid: efb1e2fcf9a5a0d44870907e350bcc09, type: 3}

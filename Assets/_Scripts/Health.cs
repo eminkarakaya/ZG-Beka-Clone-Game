@@ -26,5 +26,10 @@ public class Health : MonoBehaviour
             }
         }
     }
+    void Start()
+    {
+        hpSlider.maxValue = _hp;
+        hpSlider.value = _hp;
+    }
     
 }

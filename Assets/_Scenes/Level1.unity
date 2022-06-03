@@ -3886,6 +3886,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1854934835}
     - target: {fileID: 5642403087004843284, guid: 88ebd2ee324cd31429443b98bd2a0859, type: 3}
+      propertyPath: taskClasses.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5642403087004843284, guid: 88ebd2ee324cd31429443b98bd2a0859, type: 3}
       propertyPath: taskClasses.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1605979171}
@@ -3916,11 +3920,15 @@ PrefabInstance:
     - target: {fileID: 5642403087004843284, guid: 88ebd2ee324cd31429443b98bd2a0859, type: 3}
       propertyPath: taskClasses.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 1561044998}
+      objectReference: {fileID: 0}
     - target: {fileID: 5642403087004843284, guid: 88ebd2ee324cd31429443b98bd2a0859, type: 3}
       propertyPath: taskClasses.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 1561044998}
+    - target: {fileID: 5642403087004843284, guid: 88ebd2ee324cd31429443b98bd2a0859, type: 3}
+      propertyPath: taskClasses.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88ebd2ee324cd31429443b98bd2a0859, type: 3}
 --- !u!1001 &6178278084293424535

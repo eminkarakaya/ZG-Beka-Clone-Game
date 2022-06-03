@@ -14,7 +14,7 @@ public class Gun : Raycast , IGun
     public int isinmaSayisi = 50;
     float memidolumSuresi = 0.05f;
     float memidolumSuresiTemp;
-    public Slider slider;
+    [HideInInspector] public Slider slider;
     Slots slots;
     public int slot;
     Image gunImage;
@@ -23,13 +23,15 @@ public class Gun : Raycast , IGun
     public float cooldown;
     float cooldownTemp;
     bool machinegunFireReady;
-    public GameObject gun;
+    [HideInInspector] public GameObject gun;
     float randomX = -.5f;
     float randomZ = .5f;
     Queue<GameObject> bullets = new Queue<GameObject>();
 
     void Start()
     {
+        gun = GameObject.Find("Gun");
+        slider = transform.GetChild(1).GetComponent<Slider>();
         memidolumSuresiTemp = memidolumSuresi;
         slider = GetComponentInChildren<Slider>();
         slots = FindObjectOfType<Slots>();

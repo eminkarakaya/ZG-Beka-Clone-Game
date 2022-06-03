@@ -16,10 +16,11 @@ public class Enemy : MonoBehaviour
     public int damage;
     public float speed;
     public float attackRate;
-    [SerializeField] GameObject target;
+    GameObject target;
     NavMeshAgent agent;
     void Start()
     {
+        target = FindObjectOfType<PlayerOnGround>().gameObject;
         agent = GetComponent<NavMeshAgent>();
         agent.speed = speed;   
     }

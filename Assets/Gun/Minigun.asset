@@ -15,7 +15,7 @@ MonoBehaviour:
   fireSound: {fileID: 8300000, guid: 17e65e0e10a366f4299cd18e93d54b18, type: 3}
   gunName: Minigun
   bulletType: 0
-  weaponSprite: {fileID: 21300000, guid: c35dc461edc3c6f4d86cff4428aa7d67, type: 3}
+  weaponSprite: {fileID: 21300000, guid: a3052425e8b9e5449923c06c8f9f503f, type: 3}
   damage: 32
   attackRate: 0.08
   reloadTime: 5.26

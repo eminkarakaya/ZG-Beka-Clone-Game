@@ -19,6 +19,7 @@ public class PlayerOnGround : MonoBehaviour
     public float plantTime;
     public float plantTimeTemp;
     public float bombadanKacmaSuresi;
+    public float bombadanKacmaSuresiTemp;
     Animator animator;
     EnemiesInRange enemiesInRange;
     public List<Enemy> enemies;
@@ -42,6 +43,7 @@ public class PlayerOnGround : MonoBehaviour
     {
         plantSlider.GetComponent<Slider>().maxValue = plantTime;
         bombadanKacmaSuresi += plantTime;
+        bombadanKacmaSuresiTemp = bombadanKacmaSuresi;
         plantTimeTemp = plantTime;
         animator = GetComponent<Animator>();
         enemiesInRange = GetComponentInChildren<EnemiesInRange>();
@@ -147,23 +149,24 @@ public class PlayerOnGround : MonoBehaviour
     }
     public IEnumerator BombaPatlama()
     {
+        var bombaPatlamaTransformm = Instantiate(bombaPatlamaTransform,transform.position,Quaternion.identity);
+        bombaPatlamaTransformm.parent = null;
         PlayerPrefs.SetInt("Metal", PlayerPrefs.GetInt("Metal") + GameManager.Instance.kazanilacakMetal);
         PlayerPrefs.SetInt("Malzeme",PlayerPrefs.GetInt("Malzeme") +GameManager.Instance.kazanilacakMalzeme);
-        Debug.Log(GameManager.Instance.kazanilacakMalzeme + " kazanılacakmalzeme");
-        Debug.Log(GameManager.Instance.kazanilacakMetal + " kazanılacakmetal");
         yield return new WaitForSeconds(bombadanKacmaSuresi);
-        Instantiate(effect,bombaPatlamaTransform.position,Quaternion.identity);
-        
+        Instantiate(effect,bombaPatlamaTransformm.position,Quaternion.identity);
+        plantTime = plantTimeTemp;
+        bombadanKacmaSuresi = bombadanKacmaSuresiTemp;
+        plantSlider.GetComponent<Slider>().value = 0;
         // OnMalzemeCollected.Invoke(GameManager.Instance.kazanilacakMalzeme);
         // OnMetalCollected.Invoke(GameManager.Instance.kazanilacakMetal);
     }
 
-    public void PlantBomb(Transform transform)
+    public void PlantBomb()
     {
-        bombaPatlamaTransform.parent = null;
+        
         plantSlider.SetActive(true);
         plantSlider.GetComponent<Slider>().value += Time.deltaTime;
-        Debug.Log("bomba kuruluyor");
         tasks = Tasks.plantBomb;
         plantTime -= Time.deltaTime;
         bombadanKacmaSuresi -= Time.deltaTime;

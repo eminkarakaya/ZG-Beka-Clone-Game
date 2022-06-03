@@ -5,8 +5,12 @@ using UnityEngine.EventSystems;
 
 public class HelicopterRotate : MonoBehaviour
 {
-    [SerializeField] Transform playerOnGround; 
+    Transform playerOnGround; 
     public float i;
+    void Start()
+    {
+        playerOnGround = FindObjectOfType<PlayerOnGround>().transform;
+    }
     void Update()
     {
          

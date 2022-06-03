@@ -7,7 +7,6 @@ public class Health : MonoBehaviour
 {
     public static event System.Action KillEvent;
 
-    public Text killCountTxt;
     public Slider hpSlider;
     [SerializeField] private int _hp;
     public int Hp

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6dcd1cbb396c9943890b68c27746063, type: 3}
+  m_Name: M60
+  m_EditorClassIdentifier: 
+  fireSound: {fileID: 8300000, guid: 17e65e0e10a366f4299cd18e93d54b18, type: 3}
+  gunName: M60
+  bulletType: 0
+  weaponSprite: {fileID: 21300000, guid: 99c1612f71dc94c47a19e1501d7261c3, type: 3}
+  damage: 15
+  attackRate: 0.04
+  reloadTime: 5.26
+  level: 1
+  isinma: 3
